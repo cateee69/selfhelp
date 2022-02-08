@@ -172,14 +172,8 @@ class MyClient(discord.Client):
             form = message.content.replace(
                 "tos!build ",
                 "",
-            )
-            form = form.replace(
-                "\n",
-                r"\n",
-            )
-            await message.channel.send(f"""```{{
-    "content" : "{form}"
-}}```""")
+            orm = {"content":form}
+            await message.channel.send(json.dumps(orm,indent=4))
         if (message.content.lower() == "tos!reboot"):
             if (message.author.id == 862282426860699678):
                 embed = discord.Embed(
