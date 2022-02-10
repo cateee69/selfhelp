@@ -1,4 +1,4 @@
-"""os module for reboot test"""
+"""os module for reboot"""
 import os
 
 # sys module for kill & reboot
